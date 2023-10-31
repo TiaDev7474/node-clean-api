@@ -8,15 +8,21 @@
   },
   "lint-staged": {
     "*.ts": [
-      "standard --fix",
+      "standard",
       "git add"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.8.10",
+    "husky": "^8.0.3",
     "lint-staged": "^15.0.2",
     "standard": "^17.1.0",
     "typescript": "^5.2.2"
